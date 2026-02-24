@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+
+# Environment variables (contains API keys)
+.env
+
+# Database files
+*.db
+
+# Build & cache
+dist/
+build/
+.vite/
+*.egg-info/
+
+# IDE & OS
+.cursor/
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test files
+backend/test_*.py
+
+# Assets (user screenshots)
+assets/
+
+# Agent transcripts
+agent-transcripts/
+
+# Terminals
+terminals/
+
+# MCPs
+mcps/
+
+# Legacy scaffold (root-level backend/frontend are empty scaffolds)
+/backend/
+/frontend/

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+:root {
+  --cp-bg-deep: #0a0a12;
+  --cp-bg-primary: #0d0d1a;
+  --cp-bg-secondary: #111126;
+  --cp-bg-surface: #161630;
+  --cp-bg-elevated: #1a1a3e;
+
+  --cp-cyan: #00f0ff;
+  --cp-cyan-dim: #00a8b3;
+  --cp-magenta: #ff00e5;
+  --cp-magenta-dim: #b300a0;
+  --cp-purple: #a855f7;
+  --cp-purple-dim: #7c3aed;
+  --cp-blue: #3b82f6;
+  --cp-yellow: #fbbf24;
+  --cp-green: #22c55e;
+  --cp-red: #ef4444;
+  --cp-orange: #f97316;
+
+  --cp-text-primary: #e0e0ff;
+  --cp-text-secondary: #8888aa;
+  --cp-text-dim: #555577;
+  --cp-text-glow: #00f0ff;
+
+  --cp-border: rgba(0, 240, 255, 0.12);
+  --cp-border-active: rgba(0, 240, 255, 0.4);
+  --cp-glow-cyan: 0 0 15px rgba(0, 240, 255, 0.3), 0 0 30px rgba(0, 240, 255, 0.1);
+  --cp-glow-magenta: 0 0 15px rgba(255, 0, 229, 0.3), 0 0 30px rgba(255, 0, 229, 0.1);
+  --cp-glow-purple: 0 0 15px rgba(168, 85, 247, 0.3), 0 0 30px rgba(168, 85, 247, 0.1);
+
+  --cp-glass: rgba(13, 13, 26, 0.7);
+  --cp-glass-border: rgba(0, 240, 255, 0.08);
+
+  --cp-font-display: 'Orbitron', 'Rajdhani', sans-serif;
+  --cp-font-body: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
+  --cp-font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+  --cp-radius: 6px;
+  --cp-radius-lg: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: var(--cp-font-body);
+  background: var(--cp-bg-deep);
+  color: var(--cp-text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.15);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.3);
+}
+
+::selection {
+  background: rgba(0, 240, 255, 0.25);
+  color: #fff;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes border-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing-cursor {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}

@@ -1,0 +1,215 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--cp-bg-primary);
+  border-left: 1px solid var(--cp-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(168, 85, 247, 0.2) 30%,
+    rgba(168, 85, 247, 0.4) 50%,
+    rgba(168, 85, 247, 0.2) 70%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 16px 16px;
+  border-bottom: 1px solid var(--cp-border);
+}
+
+.headerIcon {
+  color: var(--cp-purple);
+  font-size: 18px;
+  filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.4));
+}
+
+.headerTitle {
+  font-family: var(--cp-font-display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cp-purple);
+  text-shadow: 0 0 8px rgba(168, 85, 247, 0.3);
+}
+
+.count {
+  background: rgba(168, 85, 247, 0.15);
+  color: var(--cp-purple);
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 10px;
+  line-height: 18px;
+  font-family: var(--cp-font-mono);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.chartList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.chartCard {
+  background: var(--cp-bg-secondary);
+  border-radius: var(--cp-radius-lg);
+  padding: 16px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(168, 85, 247, 0.1);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.4s ease both;
+}
+
+.chartCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cp-purple), var(--cp-cyan), var(--cp-magenta));
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.chartCard:hover {
+  border-color: rgba(168, 85, 247, 0.25);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.08), inset 0 0 30px rgba(168, 85, 247, 0.02);
+}
+
+.chartCard:hover::before {
+  opacity: 1;
+}
+
+.chartTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--cp-text-primary);
+}
+
+.chartTag {
+  font-family: var(--cp-font-mono) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.5px;
+  border: none !important;
+}
+
+/* ---- Pair Group ---- */
+
+.pairGroup {
+  margin-bottom: 6px;
+}
+
+/* ---- SQL Card ---- */
+
+.sqlCard {
+  background: var(--cp-bg-secondary);
+  border-radius: var(--cp-radius-lg);
+  margin-bottom: 14px;
+  border: 1px solid rgba(0, 240, 255, 0.12);
+  overflow: hidden;
+  position: relative;
+  animation: fadeInUp 0.4s ease both;
+}
+
+.sqlCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cp-cyan), var(--cp-purple), var(--cp-magenta));
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.sqlCard:hover {
+  border-color: rgba(0, 240, 255, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 240, 255, 0.06);
+}
+
+.sqlCard:hover::before {
+  opacity: 1;
+}
+
+.sqlCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(0, 240, 255, 0.04);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.06);
+}
+
+.sqlIcon {
+  color: var(--cp-cyan);
+  font-size: 14px;
+  filter: drop-shadow(0 0 4px rgba(0, 240, 255, 0.4));
+}
+
+.sqlLabel {
+  font-family: var(--cp-font-mono);
+  font-size: 12px;
+  color: var(--cp-cyan-dim);
+  letter-spacing: 1px;
+}
+
+.sqlCode {
+  margin: 0;
+  padding: 12px 14px;
+  color: var(--cp-cyan);
+  font-size: 12px;
+  font-family: var(--cp-font-mono);
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.15);
+}
+
+/* ---- Empty ---- */
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 44px;
+  margin-bottom: 16px;
+  opacity: 0.3;
+}
+
+.emptyText {
+  color: var(--cp-text-dim);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}

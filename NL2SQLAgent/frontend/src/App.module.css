@@ -1,0 +1,57 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: var(--cp-bg-deep);
+  position: relative;
+}
+
+.layout::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0, 240, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.015) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.layout::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(0, 240, 255, 0.3),
+    rgba(255, 0, 229, 0.3),
+    rgba(168, 85, 247, 0.3),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: border-flow 8s ease-in-out infinite;
+  z-index: 10;
+}
+
+.sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  z-index: 1;
+}
+
+.chart {
+  width: 420px;
+  flex-shrink: 0;
+  z-index: 2;
+}
